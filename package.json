@@ -8,7 +8,7 @@
     "typecheck": "bun run --filter '*' typecheck",
     "lint": "bun run --filter '*' lint",
     "ci:version": "changeset version && bun update",
-    "ci:publish": "for dir in packages/*; do (cd \"$dir\" && npm publish --access public || true); done && changeset tag"
+    "ci:publish": "for dir in packages/*; do (cd \"$dir\" && npm publish --access public --provenance || true); done && changeset tag"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
