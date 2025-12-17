@@ -10,21 +10,9 @@
         "typescript": "^5.7.0",
       },
     },
-    "packages/async-metadata": {
-      "name": "@protobuf-ts-toolkit/async-metadata",
-      "version": "0.0.0",
-      "devDependencies": {
-        "@protobuf-ts/runtime-rpc": "^2.9.0",
-        "tsup": "^8.0.0",
-        "typescript": "^5.7.0",
-      },
-      "peerDependencies": {
-        "@protobuf-ts/runtime-rpc": "^2.0.0",
-      },
-    },
     "packages/browser-logger": {
       "name": "@protobuf-ts-toolkit/browser-logger",
-      "version": "0.0.0",
+      "version": "1.0.0",
       "devDependencies": {
         "@protobuf-ts/runtime-rpc": "^2.9.0",
         "tsup": "^8.0.0",
@@ -36,7 +24,7 @@
     },
     "packages/grpc-error": {
       "name": "@protobuf-ts-toolkit/grpc-error",
-      "version": "0.0.0",
+      "version": "1.0.0",
       "devDependencies": {
         "@protobuf-ts/runtime": "^2.9.0",
         "@protobuf-ts/runtime-rpc": "^2.9.0",
@@ -50,7 +38,7 @@
     },
     "packages/grpc-web-hybrid": {
       "name": "@protobuf-ts-toolkit/grpc-web-hybrid",
-      "version": "0.0.0",
+      "version": "1.0.0",
       "dependencies": {
         "@improbable-eng/grpc-web": "^0.15.0",
       },
@@ -67,9 +55,21 @@
         "@protobuf-ts/runtime-rpc": "^2.0.0",
       },
     },
+    "packages/metadata": {
+      "name": "@protobuf-ts-toolkit/metadata",
+      "version": "1.0.0",
+      "devDependencies": {
+        "@protobuf-ts/runtime-rpc": "^2.9.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.7.0",
+      },
+      "peerDependencies": {
+        "@protobuf-ts/runtime-rpc": "^2.0.0",
+      },
+    },
     "packages/opentelemetry": {
       "name": "@protobuf-ts-toolkit/opentelemetry",
-      "version": "0.0.0",
+      "version": "1.0.0",
       "devDependencies": {
         "@opentelemetry/api": "^1.9.0",
         "@protobuf-ts/runtime-rpc": "^2.9.0",
@@ -79,14 +79,6 @@
       "peerDependencies": {
         "@opentelemetry/api": "^1.0.0",
         "@protobuf-ts/runtime-rpc": "^2.0.0",
-      },
-    },
-    "packages/utils": {
-      "name": "@protobuf-ts-toolkit/utils",
-      "version": "0.0.0",
-      "devDependencies": {
-        "tsup": "^8.0.0",
-        "typescript": "^5.7.0",
       },
     },
   },
@@ -203,17 +195,15 @@
 
     "@opentelemetry/api": ["@opentelemetry/api@1.9.0", "", {}, "sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg=="],
 
-    "@protobuf-ts-toolkit/async-metadata": ["@protobuf-ts-toolkit/async-metadata@workspace:packages/async-metadata"],
-
     "@protobuf-ts-toolkit/browser-logger": ["@protobuf-ts-toolkit/browser-logger@workspace:packages/browser-logger"],
 
     "@protobuf-ts-toolkit/grpc-error": ["@protobuf-ts-toolkit/grpc-error@workspace:packages/grpc-error"],
 
     "@protobuf-ts-toolkit/grpc-web-hybrid": ["@protobuf-ts-toolkit/grpc-web-hybrid@workspace:packages/grpc-web-hybrid"],
 
-    "@protobuf-ts-toolkit/opentelemetry": ["@protobuf-ts-toolkit/opentelemetry@workspace:packages/opentelemetry"],
+    "@protobuf-ts-toolkit/metadata": ["@protobuf-ts-toolkit/metadata@workspace:packages/metadata"],
 
-    "@protobuf-ts-toolkit/utils": ["@protobuf-ts-toolkit/utils@workspace:packages/utils"],
+    "@protobuf-ts-toolkit/opentelemetry": ["@protobuf-ts-toolkit/opentelemetry@workspace:packages/opentelemetry"],
 
     "@protobuf-ts/grpcweb-transport": ["@protobuf-ts/grpcweb-transport@2.11.1", "", { "dependencies": { "@protobuf-ts/runtime": "^2.11.1", "@protobuf-ts/runtime-rpc": "^2.11.1" } }, "sha512-1W4utDdvOB+RHMFQ0soL4JdnxjXV+ddeGIUg08DvZrA8Ms6k5NN6GBFU2oHZdTOcJVpPrDJ02RJlqtaoCMNBtw=="],
 
