@@ -1,25 +1,30 @@
+import type { IMessageType } from '@protobuf-ts/runtime';
 import type { MethodInfo } from '@protobuf-ts/runtime-rpc';
 
-export type LogLevel = 'debug' | 'info' | 'error';
+export type TypeRegistry = IMessageType<object>[] | undefined;
+export type Verbosity = 'errors' | 'normal' | 'verbose';
 export type CallType = 'unary' | 'serverStreaming' | 'clientStreaming' | 'duplex';
 
-export interface LogContext {
+export interface VerbosityContext {
   readonly method: MethodInfo;
   readonly callType: CallType;
-  readonly level: LogLevel;
 }
+
+export type VerbosityProvider = Verbosity | ((context: VerbosityContext) => Verbosity);
 
 export interface BrowserLoggerConfig {
   /**
-   * Filter which calls to log.
-   * Return true to log, false to skip.
-   * @default () => true
+   * Type registry for converting protobuf messages to JSON.
    */
-  readonly shouldLog?: (context: LogContext) => boolean;
+  readonly typeRegistry?: TypeRegistry;
 
   /**
-   * Log level to use.
-   * @default 'debug'
+   * Verbosity level for logging.
+   * Can be a static value or a function that returns verbosity based on context.
+   * - 'errors': only log errors
+   * - 'normal': log requests and responses
+   * - 'verbose': log everything including streaming messages, method info, metadata
+   * @default 'normal'
    */
-  readonly level?: LogLevel;
+  readonly verbosity?: VerbosityProvider;
 }

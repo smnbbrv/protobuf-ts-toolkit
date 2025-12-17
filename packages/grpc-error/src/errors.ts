@@ -1,11 +1,5 @@
 import type { ErrorDetail, GrpcErrorOptions } from './types.js';
 
-// V8's captureStackTrace is not in standard lib types
-declare global {
-  interface ErrorConstructor {
-    captureStackTrace?(targetObject: object, constructorOpt?: Function): void;
-  }
-}
 
 /**
  * Base class for all gRPC errors.
@@ -31,8 +25,8 @@ export class GrpcError extends Error {
     this.details = options?.details ?? [];
 
     // Maintains proper stack trace for where our error was thrown (only available on V8)
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, this.constructor);
+    if ('captureStackTrace' in Error) {
+      (Error as { captureStackTrace: (t: object, c?: Function) => void }).captureStackTrace(this, this.constructor);
     }
   }
 }
