@@ -1,6 +1,6 @@
 {
   "name": "@protobuf-ts-toolkit/browser-logger",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Browser console logging interceptor for gRPC calls",
   "type": "module",
   "main": "./dist/index.js",
@@ -12,7 +12,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
@@ -22,7 +24,16 @@
     "url": "https://github.com/smnbbrv/protobuf-ts-toolkit",
     "directory": "packages/browser-logger"
   },
-  "keywords": ["grpc", "protobuf", "protobuf-ts", "logging", "browser", "console", "debug", "typescript"],
+  "keywords": [
+    "grpc",
+    "protobuf",
+    "protobuf-ts",
+    "logging",
+    "browser",
+    "console",
+    "debug",
+    "typescript"
+  ],
   "author": "smnbbrv",
   "license": "MIT",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@protobuf-ts-toolkit/grpc-web-hybrid",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Hybrid gRPC-web transport: HTTP for unary/server-streaming, WebSocket for client-streaming/duplex",
   "type": "module",
   "main": "./dist/index.js",
@@ -12,7 +12,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
@@ -22,7 +24,16 @@
     "url": "https://github.com/smnbbrv/protobuf-ts-toolkit",
     "directory": "packages/grpc-web-hybrid"
   },
-  "keywords": ["grpc", "grpc-web", "protobuf", "protobuf-ts", "transport", "websocket", "streaming", "typescript"],
+  "keywords": [
+    "grpc",
+    "grpc-web",
+    "protobuf",
+    "protobuf-ts",
+    "transport",
+    "websocket",
+    "streaming",
+    "typescript"
+  ],
   "author": "smnbbrv",
   "license": "MIT",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@protobuf-ts-toolkit/opentelemetry",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "OpenTelemetry interceptor for gRPC calls with protobuf-ts",
   "type": "module",
   "main": "./dist/index.js",
@@ -12,7 +12,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
@@ -22,7 +24,16 @@
     "url": "https://github.com/smnbbrv/protobuf-ts-toolkit",
     "directory": "packages/opentelemetry"
   },
-  "keywords": ["grpc", "protobuf", "protobuf-ts", "opentelemetry", "otel", "tracing", "observability", "typescript"],
+  "keywords": [
+    "grpc",
+    "protobuf",
+    "protobuf-ts",
+    "opentelemetry",
+    "otel",
+    "tracing",
+    "observability",
+    "typescript"
+  ],
   "author": "smnbbrv",
   "license": "MIT",
   "scripts": {
