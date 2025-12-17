@@ -1,0 +1,42 @@
+{
+  "name": "@protobuf-ts-toolkit/grpc-error",
+  "version": "0.0.0",
+  "description": "Typed error classes and interceptor for gRPC applications",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smnbbrv/protobuf-ts-toolkit",
+    "directory": "packages/grpc-error"
+  },
+  "keywords": ["grpc", "protobuf", "protobuf-ts", "errors", "typescript", "interceptor"],
+  "author": "smnbbrv",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@protobuf-ts/runtime": "^2.0.0",
+    "@protobuf-ts/runtime-rpc": "^2.0.0"
+  },
+  "devDependencies": {
+    "@protobuf-ts/runtime": "^2.9.0",
+    "@protobuf-ts/runtime-rpc": "^2.9.0",
+    "typescript": "^5.7.0",
+    "tsup": "^8.0.0"
+  }
+}
