@@ -1,5 +1,11 @@
 # @protobuf-ts-toolkit/browser-logger
 
+## 1.0.2
+
+### Patch Changes
+
+- 9cb1294: add printing settings to client streams
+
 ## 1.0.1
 
 ### Patch Changes
