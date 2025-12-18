@@ -5,15 +5,15 @@
     "": {
       "name": "protobuf-ts-toolkit",
       "devDependencies": {
-        "@changesets/cli": "^2.27.0",
-        "@types/bun": "^1.0.0",
-        "tsup": "^8.0.0",
-        "typescript": "^5.7.0",
+        "@changesets/cli": "^2.29.8",
+        "@types/bun": "^1.3.4",
+        "tsup": "^8.5.1",
+        "typescript": "^5.9.3",
       },
     },
     "packages/browser-logger": {
       "name": "@protobuf-ts-toolkit/browser-logger",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "devDependencies": {
         "@protobuf-ts/runtime": "^2.9.0",
         "@protobuf-ts/runtime-rpc": "^2.9.0",
