@@ -229,12 +229,20 @@ export function createBrowserLogger(config: BrowserLoggerConfig = {}): RpcInterc
           `%c#${id}: ${formatTime(new Date())} -> ${method.service.typeName}/${method.name} [client-stream]`,
           style,
         );
+      const printSettings = (style: string) => console.log('%csc', style, method);
+      const printMetadata = (style: string) => console.log('%c**', style, options);
       const closeGroup = () => console.groupEnd();
 
       if (canLog(method, 'clientStreaming', 'normal')) {
         safeLogs(() => {
           openGroup(streamStyle);
+          if (canLog(method, 'clientStreaming', 'verbose')) {
+            printSettings(streamStyle);
+          }
           console.log('%c>>', streamStyle, 'client streaming started');
+          if (canLog(method, 'clientStreaming', 'verbose')) {
+            printMetadata(streamStyle);
+          }
           closeGroup();
         });
       }
@@ -296,12 +304,20 @@ export function createBrowserLogger(config: BrowserLoggerConfig = {}): RpcInterc
           `%c#${id}: ${formatTime(new Date())} -> ${method.service.typeName}/${method.name} [duplex]`,
           style,
         );
+      const printSettings = (style: string) => console.log('%csc', style, method);
+      const printMetadata = (style: string) => console.log('%c**', style, options);
       const closeGroup = () => console.groupEnd();
 
       if (canLog(method, 'duplex', 'normal')) {
         safeLogs(() => {
           openGroup(streamStyle);
+          if (canLog(method, 'duplex', 'verbose')) {
+            printSettings(streamStyle);
+          }
           console.log('%c<>', streamStyle, 'duplex streaming started');
+          if (canLog(method, 'duplex', 'verbose')) {
+            printMetadata(streamStyle);
+          }
           closeGroup();
         });
       }
